@@ -1,0 +1,34 @@
+{
+  "name": "my-vs-code-theme",
+  "displayName": "My Theme",
+  "description": "My custom theme for Visual Studio Code",
+  "version": "0.0.1",
+  "publisher": "irahuldutta02",
+  "engines": {
+    "vscode": "^1.12.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "My Theme Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/my-theme-dark.json"
+      }
+    ]
+  },
+  "keywords": [
+    "theme",
+    "dark"
+  ],
+  "scripts": {
+    "attach": "./dev.sh attach",
+    "eject": "./dev.sh eject",
+    "package": "mkdir -p out && npx @vscode/vsce package -o out/my-vs-code-theme.vsix"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.0.0"
+  }
+}
